@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/Home.gd" type="Script" id=1]
+
+[node name="Home" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BG" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BG"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 40.0
+margin_top = 40.0
+margin_right = -40.0
+margin_bottom = -40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Welcome" type="Label" parent="BG/VBoxContainer"]
+margin_right = 944.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+custom_colors/font_color = Color( 0.541176, 0.0392157, 0.243137, 1 )
+text = "Welcome To Godot + Appwrite Demo"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="NameLabel" type="Label" parent="BG/VBoxContainer"]
+margin_top = 54.0
+margin_right = 944.0
+margin_bottom = 68.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Name"
+
+[node name="Name" type="Label" parent="BG/VBoxContainer"]
+margin_top = 72.0
+margin_right = 944.0
+margin_bottom = 122.0
+rect_min_size = Vector2( 0, 50 )
+custom_colors/font_color = Color( 0.541176, 0.0392157, 0.243137, 1 )
+valign = 1
+uppercase = true
+
+[node name="EmailLabel" type="Label" parent="BG/VBoxContainer"]
+margin_top = 126.0
+margin_right = 944.0
+margin_bottom = 140.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Name"
+
+[node name="Email" type="Label" parent="BG/VBoxContainer"]
+margin_top = 144.0
+margin_right = 944.0
+margin_bottom = 194.0
+rect_min_size = Vector2( 0, 50 )
+custom_colors/font_color = Color( 0.541176, 0.0392157, 0.243137, 1 )
+valign = 1
+uppercase = true
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
