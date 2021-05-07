@@ -1,6 +1,4 @@
 extends Control
-var projectId="60836fae0daa3" # YOUR_APPWIRITE_PROJECT_ID
-var endpoint="https://localhost/v1" # YOUR_APPWRITE_END_POINT
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -14,7 +12,7 @@ func _ready():
 	http.connect("request_completed", self,"_on_request_completed")
 	
 	http.request(
-		endpoint+'/account',
+		Appwrite.endpoint+'/account',
 		Appwrite.headers,
 		false,
 		HTTPClient.METHOD_GET

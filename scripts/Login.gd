@@ -1,6 +1,4 @@
 extends Control
-export var projectId="60836fae0dae5"
-export var endpoint="https://ap.popupbits.com/v1"
 export(PackedScene) var home
 
 # Declare member variables here. Examples:
@@ -32,7 +30,7 @@ func _on_LoginButton_pressed():
 	add_child(http)
 	http.connect("request_completed", self,"_on_request_completed")
 	http.request(
-		endpoint+'/account/sessions',
+		Appwrite.endpoint+'/account/sessions',
 		Appwrite.headers,
 		false,
 		HTTPClient.METHOD_POST,
